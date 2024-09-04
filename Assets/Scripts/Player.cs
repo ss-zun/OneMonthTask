@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Animator anim;
+    [SerializeField] private Animator anim;
+    [SerializeField] private Transform firePoint;
+
     void Update()
     {
         anim.SetBool("Attack", false);
         if (Input.GetKeyDown(KeyCode.S))
             anim.SetBool("Attack", true);
+    }
+
+    public void FireArrow()
+    {
+        GameManager.Instance.ObjectPool.SpawnFromPool("Arrow", firePoint.position, firePoint.rotation);
     }
 }
