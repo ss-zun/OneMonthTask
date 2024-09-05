@@ -21,15 +21,14 @@ public class Arrow : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             other.GetComponent<Enemy>().TakeDamage(damage);
+            ReturnToPool();
         }
-        // 충돌 후 풀로 반환
-        ReturnToPool();
     }
 
     private void ReturnToPool()
     {
         rb.velocity = Vector2.zero;
-        CancelInvoke();  // lifeTime 타이머를 취소
+        CancelInvoke();
         GameManager.Instance.ObjectPool.ReturnToPool("Arrow", gameObject);  // 풀로 반환
     }
 }

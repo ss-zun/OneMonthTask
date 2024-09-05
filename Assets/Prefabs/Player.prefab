@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 6160695593676581391}
   - component: {fileID: 3481960965654317187}
   - component: {fileID: 7154493852942772340}
+  - component: {fileID: 2444628936261645081}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -99,7 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4caff60f18e63b648bd6fb0347dd677b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firePoint: {fileID: 4220480048677266948}
   anim: {fileID: 6160695593676581391}
+  attackRadius: 14
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  playerCollider: {fileID: 2444628936261645081}
 --- !u!212 &7154493852942772340
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -152,3 +159,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &2444628936261645081
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4208610651453312012}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.055555582, y: 2.7777777}
+  serializedVersion: 2
+  m_Radius: 0.6111111
