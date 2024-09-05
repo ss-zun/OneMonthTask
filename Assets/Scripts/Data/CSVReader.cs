@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class CSVReader : MonoBehaviour
 {
-    public Dictionary<string, EnemyData> unitDataDic = new Dictionary<string, EnemyData>();
+    public List<EnemyData> enemyList = new List<EnemyData>();  // 적 데이터를 저장할 리스트
 
-    void Start()
+    void Awake()
     {
         LoadCSV();
     }
 
     void LoadCSV()
     {
-        TextAsset csvFile = Resources.Load<TextAsset>("SampleMonster");
+        TextAsset csvFile = Resources.Load<TextAsset>("Data/SampleMonster");
         string[] data = csvFile.text.Split(new char[] { '\n' });
 
         // 첫 번째 줄은 헤더이므로, 그다음 줄부터 파싱
@@ -22,7 +22,7 @@ public class CSVReader : MonoBehaviour
             if (string.IsNullOrEmpty(data[i])) continue; // 빈 줄 건너뜀
             string[] row = data[i].Split(',');
 
-            EnemyData unit = new EnemyData
+            EnemyData enemy = new EnemyData
             {
                 Name = row[0],
                 Grade = row[1],
@@ -30,20 +30,14 @@ public class CSVReader : MonoBehaviour
                 Health = int.Parse(row[3])
             };
 
-            if (!unitDataDic.ContainsKey(name))
-            {
-                unitDataDic.Add(unit.Name, unit);
-            }
-            else
-            {
-                Debug.LogWarning($"딕셔너리에 존재하지 않는 Key: {unit.Name}");
-            }
+            // 리스트에 적 데이터를 추가
+            enemyList.Add(enemy);
         }
 
         // 파싱된 데이터 출력 (테스트용)
-        foreach (KeyValuePair<string, EnemyData> entry in unitDataDic)
+        foreach (EnemyData enemy in enemyList)
         {
-            Debug.Log($"{entry.Key}: {entry.Value.Name} ({entry.Value.Grade}) - Speed: {entry.Value.Speed}, Health: {entry.Value.Health}");
+            Debug.Log($"{enemy.Name} ({enemy.Grade}) - Speed: {enemy.Speed}, Health: {enemy.Health}");
         }
     }
 }

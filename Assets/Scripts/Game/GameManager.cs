@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 
     public CSVReader CSVReader;
     public ObjectPool ObjectPool;
+    public Spawner Spawner;
 
     private void Awake()
     {

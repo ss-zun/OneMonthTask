@@ -1,48 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
     public EnemyData data;
     public Animator anim;
-    private int currentHealth;
+    public Coroutine moveCoroutine;
+
     private AnimationData animData = new AnimationData();
+    private Vector2 endPoint;
+    private int currentHealth;
+    private UnityAction onRespawnEnemy;
 
-    private void Start()
+    public void Init(EnemyData enemyData, UnityAction onRespawn)
     {
-        data = new EnemyData();
-        animData.Init();       
-    }
+        animData.Init();
+        endPoint = GameManager.Instance.Spawner.endPoint;
 
-    private void OnEnable()
-    {
+        data = enemyData;
         currentHealth = data.Health;
+        onRespawnEnemy = onRespawn;
+
+        anim.SetBool(animData.DieParameterHash, false);
+        anim.SetBool(animData.HitParameterHash, false);
+
+        moveCoroutine = StartCoroutine(MoveToEndPoint());
     }
 
-    public void TakeDamage()
+    private IEnumerator MoveToEndPoint()
     {
+        while (!IsDie() && Vector2.Distance(transform.position, endPoint) > 0.1f)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, endPoint, data.Speed * Time.deltaTime);
+            yield return null;
+        }
+
+        // 끝 지점에 도달
+        onRespawnEnemy?.Invoke();
+        GameManager.Instance.ObjectPool.ReturnToPool("Enemy", gameObject);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
         if (IsDie())
         {
-            anim.SetBool(animData.DieParameterHash, true);
-            Die();
+            anim.SetTrigger(animData.DieParameterHash);
+            if (moveCoroutine != null)
+                StopCoroutine(moveCoroutine);
+            onRespawnEnemy?.Invoke();
         }
         else
         {
-            anim.SetBool(animData.HitParameterHash, true);
+            anim.SetTrigger(animData.HitParameterHash);
         }
     }
 
     private bool IsDie()
     {
-        if(currentHealth <= 0)
-            return true;
-        
-        return false;
-    }
-
-    private void Die()
-    {
-        GameManager.Instance.ObjectPool.ReturnToPool("Enemy", gameObject);
+        return currentHealth <= 0;
     }
 }
