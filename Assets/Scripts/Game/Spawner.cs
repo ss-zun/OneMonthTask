@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     public float gizmoRadius = 0.5f;  // 기즈모의 반지름
 
     private int currentEnemyIndex = 0;  // 현재 적 인덱스
+    private string animatorPath = "Animations/Animators/";
 
     private void Start()
     {
@@ -36,6 +37,7 @@ public class Spawner : MonoBehaviour
         Enemy enemy = enemyObject.GetComponent<Enemy>();
         if (enemy != null)
         {
+            enemy.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>(animatorPath + enemyData.Name);
             enemy.Init(enemyData, SpawnNextEnemy);  // 적 데이터와 적이 죽을 때 실행할 콜백 전달
         }
     }

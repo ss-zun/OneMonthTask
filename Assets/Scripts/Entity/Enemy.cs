@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
 
         // 끝 지점에 도달
         onRespawnEnemy?.Invoke();
-        OnEnemyDie();
+        GameManager.Instance.ObjectPool.ReturnToPool("Enemy", gameObject);
     }
 
     public void TakeDamage(int damage)
@@ -62,10 +62,5 @@ public class Enemy : MonoBehaviour
     private bool IsDie()
     {
         return currentHealth <= 0;
-    }
-
-    public void OnEnemyDie()
-    {
-        GameManager.Instance.ObjectPool.ReturnToPool("Enemy", gameObject);
     }
 }
