@@ -3319,11 +3319,6 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
---- !u!4 &1830608120 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4220480048677266948, guid: f31990030d025c646837958ce0389f70, type: 3}
-  m_PrefabInstance: {fileID: 5264383920057079529}
-  m_PrefabAsset: {fileID: 0}
 --- !u!213 &1840355676
 Sprite:
   m_ObjectHideFlags: 0
@@ -3542,14 +3537,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3481960965654317187, guid: f31990030d025c646837958ce0389f70, type: 3}
-      propertyPath: FirePoint
-      value: 
-      objectReference: {fileID: 1830608120}
-    - target: {fileID: 3481960965654317187, guid: f31990030d025c646837958ce0389f70, type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 1830608120}
     - target: {fileID: 4208610651453312012, guid: f31990030d025c646837958ce0389f70, type: 3}
       propertyPath: m_Name
       value: Player
