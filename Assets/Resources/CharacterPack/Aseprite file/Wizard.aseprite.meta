@@ -2,7 +2,57 @@ fileFormatVersion: 2
 guid: c2ae81439ce074f4e8a59341227fa7a6
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack01
+    second: {fileID: 7400000, guid: 7a5c16e5a7d8814499d488f3bfde0bf8, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack01_Effect
+    second: {fileID: 7400000, guid: 0658b581875fe0f4b863a57e8ffd3340, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack01_with effect
+    second: {fileID: 7400000, guid: 16365b7983d8f0a419c1106e02f1c9c1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack02
+    second: {fileID: 7400000, guid: 0d351f2991cf2884badc9af3cef3a346, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Attack02_Effect
+    second: {fileID: 7400000, guid: 0455a6c1b7355a744bd9122bc21b7b6c, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: DEATH
+    second: {fileID: 7400000, guid: 29a7e8b18b0b42243a8455006d8d7490, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Hurt
+    second: {fileID: 7400000, guid: 1abe1265051a63741af033a8b7937e31, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Idle
+    second: {fileID: 7400000, guid: 26ecf209f69cf6a448104acfd23fab41, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: Walk
+    second: {fileID: 7400000, guid: 9532a0846f6f061499c849918804f4c1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: attack02_with effect
+    second: {fileID: 7400000, guid: 4707e60004a007649b4293e8e49ccc2b, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -97,7 +147,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638610940291082273
+  platformSettingsDirtyTick: 638611768977742808
   textureAssetName: 
   singleSpriteImportData:
   - name: 
