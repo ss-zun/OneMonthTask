@@ -41,8 +41,22 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    pptrCurveMapping:
+    - {fileID: 7373793700301633831, guid: f315ed21f53d6af4cbcb5da29caff074, type: 3}
+    - {fileID: 7269450340817652270, guid: f315ed21f53d6af4cbcb5da29caff074, type: 3}
+    - {fileID: -2627035892677065001, guid: f315ed21f53d6af4cbcb5da29caff074, type: 3}
+    - {fileID: -4970621587520978707, guid: f315ed21f53d6af4cbcb5da29caff074, type: 3}
+    - {fileID: -4970621587520978707, guid: f315ed21f53d6af4cbcb5da29caff074, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -67,4 +81,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.3
+    functionName: OnEnemyDie
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
