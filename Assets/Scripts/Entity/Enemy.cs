@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public EnemyData data;
     public Animator anim;
-    public int maxHealth = 100;
     private int currentHealth;
     private AnimationData animData = new AnimationData();
 
     private void Start()
     {
-        animData.Init();
-        currentHealth = maxHealth;
+        data = new EnemyData();
+        animData.Init();       
+    }
+
+    private void OnEnable()
+    {
+        currentHealth = data.Health;
     }
 
     public void TakeDamage()
@@ -28,7 +33,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public bool IsDie()
+    private bool IsDie()
     {
         if(currentHealth <= 0)
             return true;
@@ -36,8 +41,8 @@ public class Enemy : MonoBehaviour
         return false;
     }
 
-    public void Die()
+    private void Die()
     {
-        // 풀에 반환
+        GameManager.Instance.ObjectPool.ReturnToPool("Enemy", gameObject);
     }
 }

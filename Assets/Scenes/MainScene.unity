@@ -362,6 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699645925}
   - component: {fileID: 699645926}
+  - component: {fileID: 699645928}
   - component: {fileID: 699645927}
   m_Layer: 0
   m_Name: GameManager
@@ -397,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cc8d58758a454418a5827c95d652c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1816370475}
+  CSVReader: {fileID: 699645928}
   ObjectPool: {fileID: 699645927}
 --- !u!114 &699645927
 MonoBehaviour:
@@ -415,6 +416,18 @@ MonoBehaviour:
   - tag: Arrow
     prefab: {fileID: 6750906902656586949, guid: ebd528269809a644582e02a3ca53b214, type: 3}
     size: 5
+--- !u!114 &699645928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699645924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f835efd5ea7dc264d8ad1747bda879bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!213 &931091935
 Sprite:
   m_ObjectHideFlags: 0
@@ -3343,17 +3356,6 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
---- !u!114 &1816370475 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3481960965654317187, guid: f31990030d025c646837958ce0389f70, type: 3}
-  m_PrefabInstance: {fileID: 5264383920057079529}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4caff60f18e63b648bd6fb0347dd677b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1830608120 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4220480048677266948, guid: f31990030d025c646837958ce0389f70, type: 3}

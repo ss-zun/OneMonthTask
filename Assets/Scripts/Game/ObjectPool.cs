@@ -2,16 +2,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-[System.Serializable]
-public class Pool
-{
-    public string tag;  // 풀 태그
-    public GameObject prefab;  // 오브젝트 프리팹
-    public int size;  // 초기 풀 크기
-}
 
 public class ObjectPool : MonoBehaviour
 {
+    [System.Serializable]
+    public class Pool
+    {
+        public string tag;  // 풀 태그
+        public GameObject prefab;  // 오브젝트 프리팹
+        public int size;  // 초기 풀 크기
+    }
+
     public List<Pool> pools;  // 여러 풀 목록
     private Dictionary<string, ObjectPool<GameObject>> poolDic;
 
