@@ -1,11 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Net;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IPointerClickHandler
 {
     public EnemyData data;
 
@@ -19,7 +18,6 @@ public class Enemy : MonoBehaviour
 
     #region Ã¼·Â¹Ù
     private int currentHealth;
-    private Camera mainCamera;
     private Image hpFillBar;
     public SpriteRenderer enemySkin;
     public BoxCollider2D enemyCollider;
@@ -28,8 +26,7 @@ public class Enemy : MonoBehaviour
     public void Init(EnemyData enemyData, UnityAction onRespawn)
     {
         animData.Init();
-        mainCamera = Camera.main;
-        hpFillBar = GameManager.Instance.HpFillBar;
+        hpFillBar = GameManager.Instance.UIManager.HpFillBar;
         hpFillBar.fillAmount = 1f;
         endPoint = GameManager.Instance.Spawner.endPoint;
 
@@ -47,8 +44,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        Vector3 screenPos = mainCamera.WorldToScreenPoint(CalculateHpPos());
-        GameManager.Instance.HpBar.transform.position = screenPos;
+        Vector3 screenPos = Camera.main.WorldToScreenPoint(CalculateHpPos());
+        GameManager.Instance.UIManager.HpBar.transform.position = screenPos;
     }
 
     private IEnumerator MoveToEndPoint()
@@ -105,5 +102,10 @@ public class Enemy : MonoBehaviour
             enemyCollider.size = enemySkin.bounds.size;
             enemyCollider.offset = Vector2.zero;
         }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        GameManager.Instance.UIManager.ShowEnemyInfoPopup(data);
     }
 }
