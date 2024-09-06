@@ -75,7 +75,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -88,7 +88,7 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
+    defaultPivotAlignment: 0
     customPivotPosition: {x: 0.5, y: 0.5}
     mosaicPadding: 4
     spritePadding: 0
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638610940290952274
+  platformSettingsDirtyTick: 638612374627038904
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Armored Skeleton_Frame_0
     originalName: 
-    pivot: {x: 0.33333328, y: -1.6}
+    pivot: {x: 0.33333328, y: 0.39999998}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -143,7 +143,7 @@ ScriptedImporter:
     uvTransform: {x: 141, y: 72}
   - name: Armored Skeleton_Frame_35
     originalName: 
-    pivot: {x: 0.33333328, y: -1.6}
+    pivot: {x: 0.33333328, y: 0.39999998}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -163,7 +163,7 @@ ScriptedImporter:
     uvTransform: {x: 141, y: 105}
   - name: Armored Skeleton_Frame_36
     originalName: 
-    pivot: {x: 0.24137928, y: -1.4814814}
+    pivot: {x: 0.24137928, y: 0.37037033}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -183,7 +183,7 @@ ScriptedImporter:
     uvTransform: {x: 47, y: 80}
   - name: Armored Skeleton_Frame_37
     originalName: 
-    pivot: {x: 0.21874997, y: -2.3529413}
+    pivot: {x: 0.21874997, y: 0.58823526}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -203,7 +203,7 @@ ScriptedImporter:
     uvTransform: {x: 91, y: 228}
   - name: Armored Skeleton_Frame_38
     originalName: 
-    pivot: {x: 0.21874997, y: -2.6666667}
+    pivot: {x: 0.21874997, y: 0.6666666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -223,7 +223,7 @@ ScriptedImporter:
     uvTransform: {x: 47, y: 237}
   - name: Armored Skeleton_Frame_1
     originalName: 
-    pivot: {x: 0.33333328, y: -1.6}
+    pivot: {x: 0.33333328, y: 0.39999998}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -243,7 +243,7 @@ ScriptedImporter:
     uvTransform: {x: 141, y: 138}
   - name: Armored Skeleton_Frame_2
     originalName: 
-    pivot: {x: 0.33333328, y: -1.5384616}
+    pivot: {x: 0.33333328, y: 0.38461536}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -263,7 +263,7 @@ ScriptedImporter:
     uvTransform: {x: 91, y: 92}
   - name: Armored Skeleton_Frame_3
     originalName: 
-    pivot: {x: 0.33333328, y: -1.5384616}
+    pivot: {x: 0.33333328, y: 0.38461536}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -283,7 +283,7 @@ ScriptedImporter:
     uvTransform: {x: 91, y: 126}
   - name: Armored Skeleton_Frame_4
     originalName: 
-    pivot: {x: 0.33333328, y: -1.5384616}
+    pivot: {x: 0.33333328, y: 0.38461536}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -303,7 +303,7 @@ ScriptedImporter:
     uvTransform: {x: 91, y: 160}
   - name: Armored Skeleton_Frame_5
     originalName: 
-    pivot: {x: 0.33333328, y: -1.5384616}
+    pivot: {x: 0.33333328, y: 0.38461536}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -323,7 +323,7 @@ ScriptedImporter:
     uvTransform: {x: 91, y: 194}
   - name: Armored Skeleton_Frame_6
     originalName: 
-    pivot: {x: 0.33333328, y: -1.6}
+    pivot: {x: 0.33333328, y: 0.39999998}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -343,7 +343,7 @@ ScriptedImporter:
     uvTransform: {x: 141, y: 171}
   - name: Armored Skeleton_Frame_7
     originalName: 
-    pivot: {x: 0.33333328, y: -1.5384616}
+    pivot: {x: 0.33333328, y: 0.38461536}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -363,7 +363,7 @@ ScriptedImporter:
     uvTransform: {x: 141, y: 4}
   - name: Armored Skeleton_Frame_8
     originalName: 
-    pivot: {x: 0.33333328, y: -1.6}
+    pivot: {x: 0.33333328, y: 0.39999998}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -383,7 +383,7 @@ ScriptedImporter:
     uvTransform: {x: 141, y: 204}
   - name: Armored Skeleton_Frame_9
     originalName: 
-    pivot: {x: 0.33333328, y: -1.6666666}
+    pivot: {x: 0.33333328, y: 0.41666663}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -403,7 +403,7 @@ ScriptedImporter:
     uvTransform: {x: 170, y: 134}
   - name: Armored Skeleton_Frame_10
     originalName: 
-    pivot: {x: 0.33333328, y: -1.6}
+    pivot: {x: 0.33333328, y: 0.39999998}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -423,7 +423,7 @@ ScriptedImporter:
     uvTransform: {x: 170, y: 35}
   - name: Armored Skeleton_Frame_11
     originalName: 
-    pivot: {x: 0.33333328, y: -1.4814814}
+    pivot: {x: 0.33333328, y: 0.37037033}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -443,7 +443,7 @@ ScriptedImporter:
     uvTransform: {x: 47, y: 173}
   - name: Armored Skeleton_Frame_12
     originalName: 
-    pivot: {x: 0.33333328, y: -1.5384616}
+    pivot: {x: 0.33333328, y: 0.38461536}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -463,7 +463,7 @@ ScriptedImporter:
     uvTransform: {x: 141, y: 38}
   - name: Armored Skeleton_Frame_13
     originalName: 
-    pivot: {x: 0.33333328, y: -1.6666666}
+    pivot: {x: 0.33333328, y: 0.41666663}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -483,7 +483,7 @@ ScriptedImporter:
     uvTransform: {x: 170, y: 166}
   - name: Armored Skeleton_Frame_14
     originalName: 
-    pivot: {x: 0.33333328, y: -1.6}
+    pivot: {x: 0.33333328, y: 0.39999998}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -503,7 +503,7 @@ ScriptedImporter:
     uvTransform: {x: 170, y: 68}
   - name: Armored Skeleton_Frame_15
     originalName: 
-    pivot: {x: 0.30434778, y: -1.6956521}
+    pivot: {x: 0.30434778, y: 0.47826093}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -523,7 +523,7 @@ ScriptedImporter:
     uvTransform: {x: 170, y: 4}
   - name: Armored Skeleton_Frame_16
     originalName: 
-    pivot: {x: 0.25925922, y: -1.9047619}
+    pivot: {x: 0.25925922, y: 0.47619045}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -543,7 +543,7 @@ ScriptedImporter:
     uvTransform: {x: 47, y: 208}
   - name: Armored Skeleton_Frame_17
     originalName: 
-    pivot: {x: 0.40740746, y: -1.9047619}
+    pivot: {x: 0.40740746, y: 0.47619045}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -563,7 +563,7 @@ ScriptedImporter:
     uvTransform: {x: 91, y: 63}
   - name: Armored Skeleton_Frame_18
     originalName: 
-    pivot: {x: 0.16666664, y: -1.9047619}
+    pivot: {x: 0.16666664, y: 0.47619045}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -583,7 +583,7 @@ ScriptedImporter:
     uvTransform: {x: 91, y: 4}
   - name: Armored Skeleton_Frame_19
     originalName: 
-    pivot: {x: 0.17948717, y: -1.7727271}
+    pivot: {x: 0.17948717, y: 0.50000006}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -603,7 +603,7 @@ ScriptedImporter:
     uvTransform: {x: 91, y: 33}
   - name: Armored Skeleton_Frame_20
     originalName: 
-    pivot: {x: 0.21212119, y: -1.9047619}
+    pivot: {x: 0.21212119, y: 0.47619045}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -623,7 +623,7 @@ ScriptedImporter:
     uvTransform: {x: 47, y: 115}
   - name: Armored Skeleton_Frame_21
     originalName: 
-    pivot: {x: 0.21212119, y: -1.9047619}
+    pivot: {x: 0.21212119, y: 0.47619045}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -643,7 +643,7 @@ ScriptedImporter:
     uvTransform: {x: 47, y: 144}
   - name: Armored Skeleton_Frame_22
     originalName: 
-    pivot: {x: 0.33333328, y: -1.6}
+    pivot: {x: 0.33333328, y: 0.39999998}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -663,7 +663,7 @@ ScriptedImporter:
     uvTransform: {x: 170, y: 101}
   - name: Armored Skeleton_Frame_23
     originalName: 
-    pivot: {x: 0.32258064, y: -1.3103448}
+    pivot: {x: 0.32258064, y: 0.41379312}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -683,7 +683,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 170}
   - name: Armored Skeleton_Frame_24
     originalName: 
-    pivot: {x: 0.38888884, y: -1.2}
+    pivot: {x: 0.38888884, y: 0.4666666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -703,7 +703,7 @@ ScriptedImporter:
     uvTransform: {x: 47, y: 4}
   - name: Armored Skeleton_Frame_25
     originalName: 
-    pivot: {x: 0.35483876, y: -1.09375}
+    pivot: {x: 0.35483876, y: 0.46875003}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -723,7 +723,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 90}
   - name: Armored Skeleton_Frame_26
     originalName: 
-    pivot: {x: 0.31428576, y: -0.9428572}
+    pivot: {x: 0.31428576, y: 0.48571426}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -743,7 +743,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Armored Skeleton_Frame_27
     originalName: 
-    pivot: {x: 0.32258064, y: -1.3103448}
+    pivot: {x: 0.32258064, y: 0.41379312}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -763,7 +763,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 207}
   - name: Armored Skeleton_Frame_28
     originalName: 
-    pivot: {x: 0.38888884, y: -1.2}
+    pivot: {x: 0.38888884, y: 0.4666666}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -783,7 +783,7 @@ ScriptedImporter:
     uvTransform: {x: 47, y: 42}
   - name: Armored Skeleton_Frame_29
     originalName: 
-    pivot: {x: 0.35483876, y: -1.09375}
+    pivot: {x: 0.35483876, y: 0.46875003}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -803,7 +803,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 130}
   - name: Armored Skeleton_Frame_30
     originalName: 
-    pivot: {x: 0.31428576, y: -0.9428572}
+    pivot: {x: 0.31428576, y: 0.48571426}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -823,7 +823,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 47}
   - name: Armored Skeleton_Frame_31
     originalName: 
-    pivot: {x: 0.36842102, y: -1.5384616}
+    pivot: {x: 0.36842102, y: 0.38461536}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -843,7 +843,7 @@ ScriptedImporter:
     uvTransform: {x: 170, y: 198}
   - name: Armored Skeleton_Frame_32
     originalName: 
-    pivot: {x: 0.36842102, y: -1.5384616}
+    pivot: {x: 0.36842102, y: 0.38461536}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -863,7 +863,7 @@ ScriptedImporter:
     uvTransform: {x: 201, y: 4}
   - name: Armored Skeleton_Frame_33
     originalName: 
-    pivot: {x: 0.36842102, y: -1.5384616}
+    pivot: {x: 0.36842102, y: 0.38461536}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -883,7 +883,7 @@ ScriptedImporter:
     uvTransform: {x: 201, y: 38}
   - name: Armored Skeleton_Frame_34
     originalName: 
-    pivot: {x: 0.36842102, y: -1.5384616}
+    pivot: {x: 0.36842102, y: 0.38461536}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:

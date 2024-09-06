@@ -40,6 +40,10 @@ public class Spawner : MonoBehaviour
             enemy.anim.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>(animatorPath + enemyData.Name);
             enemy.Init(enemyData, SpawnNextEnemy);  // 적 데이터와 적이 죽을 때 실행할 콜백 전달
         }
+        else
+        {
+            Debug.Log(enemyObject.name);
+        }
     }
 
 #if UNITY_EDITOR

@@ -3,31 +3,52 @@ using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public EnemyData data;
-    public Animator anim;
-    public Coroutine moveCoroutine;
 
+    public Animator anim;
     private AnimationData animData = new AnimationData();
+
+    public Coroutine moveCoroutine;
     private Vector2 endPoint;
-    private int currentHealth;
+    
     private UnityAction onRespawnEnemy;
+
+    #region 체력바
+    private int currentHealth;
+    private Camera mainCamera;
+    private Image hpFillBar;
+    public SpriteRenderer enemySkin;
+    public BoxCollider2D enemyCollider;
+    #endregion
 
     public void Init(EnemyData enemyData, UnityAction onRespawn)
     {
         animData.Init();
+        mainCamera = Camera.main;
+        hpFillBar = GameManager.Instance.HpFillBar;
+        hpFillBar.fillAmount = 1f;
         endPoint = GameManager.Instance.Spawner.endPoint;
 
         data = enemyData;
         currentHealth = data.Health;
         onRespawnEnemy = onRespawn;
-
+        
         anim.SetBool(animData.DieParameterHash, false);
         anim.SetBool(animData.HitParameterHash, false);
 
+        UpdateColliderSize();
+
         moveCoroutine = StartCoroutine(MoveToEndPoint());
+    }
+
+    private void Update()
+    {
+        Vector3 screenPos = mainCamera.WorldToScreenPoint(CalculateHpPos());
+        GameManager.Instance.HpBar.transform.position = screenPos;
     }
 
     private IEnumerator MoveToEndPoint()
@@ -46,6 +67,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        SetHealth(currentHealth, data.Health);
         if (IsDie())
         {
             anim.SetTrigger(animData.DieParameterHash);
@@ -54,13 +76,34 @@ public class Enemy : MonoBehaviour
             onRespawnEnemy?.Invoke();
         }
         else
-        {
+        {           
             anim.SetTrigger(animData.HitParameterHash);
         }
     }
 
+
     private bool IsDie()
     {
         return currentHealth <= 0;
+    }
+
+    private void SetHealth(float currentHealth, float maxHealth)
+    {
+        hpFillBar.fillAmount = currentHealth / maxHealth;
+    }
+
+    private Vector3 CalculateHpPos()
+    {
+        float headTopY = enemySkin.bounds.max.y; // 스프라이트의 Y축 상단
+        return new Vector3(enemySkin.bounds.center.x, headTopY + 0.3f, 0);
+    }
+
+    public void UpdateColliderSize()
+    {
+        if (enemySkin != null && enemyCollider != null)
+        {
+            enemyCollider.size = enemySkin.bounds.size;
+            enemyCollider.offset = Vector2.zero;
+        }
     }
 }

@@ -24,10 +24,7 @@ public class Player : MonoBehaviour
     {
         while (true)
         {
-            Vector2 playerCenter = playerCollider.bounds.center; // 플레이어의 중앙 계산
-
-            // 중앙을 기준으로 적 감지
-            Collider2D currentEnemy = Physics2D.OverlapCircle(playerCenter, attackRadius, enemyLayer);
+            Collider2D currentEnemy = Physics2D.OverlapCircle(transform.position, attackRadius, enemyLayer);
 
             // 적이 감지되면 공격 애니메이션 트리거
             if (currentEnemy != null)
