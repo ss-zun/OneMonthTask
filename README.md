@@ -2,7 +2,9 @@
 한 달 인턴 과제
 
 # 시연 영상
-https://github.com/user-attachments/assets/1f70a399-0386-4e59-b40f-592a1bac529b
+https://github.com/user-attachments/assets/191cffd5-b17f-4903-82a9-9e28d67da4f3
+
+
 ---
 # 구현
 ## 최적화
