@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +8,9 @@ public class GameManager : MonoBehaviour
     public CSVReader CSVReader;
     public ObjectPool ObjectPool;
     public Spawner Spawner;
+
+    public GameObject HpBar;
+    public Image HpFillBar;
 
     private void Awake()
     {
